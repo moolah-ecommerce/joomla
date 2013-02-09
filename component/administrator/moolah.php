@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 
 require_once(JPATH_ROOT.'/components/com_moolah/helper/moolahhelper.php');
 
-JToolbarHelper::title(JText::_('COM_MOOLAH_ECOMMERCE_STORE'), 'moolah.png');
+JToolbarHelper::title(JText::_('COM_MOOLAH_ECOMMERCE_STORE'));
 JToolbarHelper::preferences('com_moolah');
 
 $params = JComponentHelper::getParams('com_moolah');

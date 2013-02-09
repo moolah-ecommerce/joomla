@@ -26,12 +26,13 @@ class MoolahHelper {
         if (!$home) {
 
             $params = JComponentHelper::getParams('com_moolah');
-            $source  = $params->get('SOURCE');
+            $server = $params->get('SERVER');
+            $local  = (gethostname() == 'Nymph.local');
 
-            if ( $source == 'store' ) {
-                $home = 'store.moolah-ecommerce.com';
+            if ( $server == 'store' ) {
+                $home = $local ? 'mec-store' : 'store.moolah-ecommerce.com';
             } else {
-                $home = (gethostname() == 'Nymph.local') ? 'mec-test' : 'test.moolah-ecommerce.com';
+                $home = $local ? 'mec-test' : 'test.moolah-ecommerce.com';
             }
 
         }
