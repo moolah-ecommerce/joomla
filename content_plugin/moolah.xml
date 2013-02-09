@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade" >
+	<name>plg_content_moolah</name>
+	<author>Moolah E-Commerce</author>
+	<creationDate>February 2013</creationDate>
+	<copyright>Copyright (C) 2012-2013 Moolah E-commerce. All rights reserved.</copyright>
+	<license>GPL 2.0</license>
+	<authorEmail>development@moolah-ecommerce.com</authorEmail>
+	<authorUrl>moolah-ecommerce.com</authorUrl>
+	<version>2.1.1</version>
+    <description>
+        <![CDATA[
+        <div style="text-align:left;">
+            <img style="float:right" src="http://moolah-ecommerce.com/images/moolah/moolah128.png" />
+            <h1>Moolah E-Commerce Store Plugin</h1>
+            <p>Moolah provides a single-page, mobile-ready checkout for your website without needing to install any software.</p>
+            <p>Use the <a href="index.php?option=com_plugins&view=plugins&filter_search=moolah" title="Plugin Manager" >Joomla Plugin Manager</a> to enable the plugin.</p>
+            <p>Then, in your Joomla Article, insert the code <strong>{moolah}</strong> into the text to load your store.</p>
+        </div>
+        ]]>
+    </description>
+	<files>
+		<filename plugin="moolah">moolah.php</filename>
+		<filename>index.html</filename>
+		<filename>moolah.xml</filename>
+	</files>
+	<languages folder="language/en-GB" >
+		<language tag="en-GB" >en-GB.plg_content_moolah.ini</language>
+		<language tag="en-GB" >en-GB.plg_content_moolah.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+			
+				<field name="STORE_ID" type="text" label="Store ID" size="32"
+					description="PLG_CONTENT_MOOLAH_STORE_ID_DESC"
+                    default="2642953450"
+				/>
+				
+				<field name="CATEGORY_ID" type="text" label="Category ID" size="32"
+					description="PLG_CONTENT_MOOLAH_CATEGORY_ID_DESC"
+                    default=""
+				/>
+				
+				<field name="PRODUCT_ID" type="text" label="Product ID" size="32"
+					description="PLG_CONTENT_MOOLAH_PRODUCT_ID_DESC"
+				/>
+
+                <field name="DIV_ID" type="text" label="DIV ID" size="32"
+                   description="PLG_CONTENT_MOOLAH_DIV_ID_DESC"
+                   default="moolah"
+                />
+
+                <field name="TESTING" type="radio" label="Testing"
+                       default="1"
+                       description="PLG_CONTENT_MOOLAH_TESTING_DESC"
+                        >
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+				
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

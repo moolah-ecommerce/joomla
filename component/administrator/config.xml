@@ -1,0 +1,46 @@
+<config>
+
+    <fieldset name="basic">
+
+        <field name="STORE_ID" type="text" label="Store ID" size="32"
+               description="COM_MOOLAH_STORE_ID_DESC"
+               default="2642953450"
+                />
+
+        <field name="CATEGORY_ID" type="text" label="Category ID" size="32"
+               description="COM_MOOLAH_CATEGORY_ID_DESC"
+               default=""
+                />
+
+        <field name="PRODUCT_ID" type="text" label="Product ID" size="32"
+               description="COM_MOOLAH_PRODUCT_ID_DESC"
+                />
+
+        <field name="DIV_ID" type="text" label="DIV ID" size="32"
+               description="COM_MOOLAH_DIV_ID_DESC"
+               default="moolah"
+                />
+
+    </fieldset>
+
+    <fieldset name="advanced">
+
+        <field name="OPEN_METHOD" type="radio" label="Open Method"
+               default="window"
+               description="COM_MOOLAH_OPEN_METHOD_DESC"
+                >
+            <option value="window">New Window</option>
+            <option value="iframe">Iframe</option>
+        </field>
+
+        <field name="SERVER" type="radio" label="Server"
+               default="test"
+               description="COM_MOOLAH_SERVER_DESC"
+                >
+            <option value="test">Testing</option>
+            <option value="store">Production</option>
+        </field>
+
+    </fieldset>
+
+</config>

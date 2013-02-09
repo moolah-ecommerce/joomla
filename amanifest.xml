@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="2.5">
+	<name>Moolah E-Commerce Package</name>
+	<packagename>Moolah</packagename>
+	<version>2.1.1</version>
+	<url>http://moolah-ecommerce.com</url>
+	<creationDate>February 2013</creationDate>
+	<author>Toby Patterson</author>
+	<packager>Moolah E-Commerce</packager>
+	<packagerurl>http://moolah-ecommerce.com</packagerurl>
+	<copyright>Copyright (C) 2012-2013 Moolah-Ecommerce. All rights reserved.</copyright>
+	<description>
+	<![CDATA[
+        <div style="text-align:left;">
+            <img src="http://moolah-ecommerce.com/images/moolah/moolah128.png" style="float:right" />
+            <h1>Moolah E-Commerce Store</h1>
+            <p>Moolah provides a single-page, mobile-ready checkout for your website without needing to install any software.</p>
+            <h2>Key Features:</h2>
+            <ul class="features">
+                <li>Your store will load into the current page of your site, and each step of the check loads smoothly into the current page.</li>
+                <li>A Moolah store can adjust automatically to whatever device the customer is using, and works with as well with a 4" screen as it does with a 24" screen.</li>
+                <li>You can easily integrate Moolah into any website, including Joomla, Wordpress, or even a normal HTML webpage.</li>
+                <li>A store can be deployed to several sites at the same time, and managed from one central location.</li>
+            </ul>
+        </div>
+        ]]>
+	</description>
+	<files >
+		<file type="component" id="com_moolah">component</file>
+		<file type="plugin" group="content" id="moolah" >content_plugin</file>
+	</files>
+</extension>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_MOOLAH_VIEW_STORE_DEFAULT_TITLE" option="COM_MOOLAH_VIEW_STORE_DEFAULT_OPTION">
+		<message>
+			<![CDATA[com_moolah_view_store_default_desc]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request" >
+
+			<field name="category"
+				label="COM_MOOLAH_VIEW_STORE_CATEGORY_LABEL"
+				required="false"
+				description="COM_MOOLAH_VIEW_STORE_CATEGORY_DESC"
+			/>
+
+            <field name="product"
+               label="COM_MOOLAH_VIEW_STORE_PRODUCT_LABEL"
+               required="false"
+               description="COM_MOOLAH_VIEW_STORE_PRODUCT_DESC"
+            />
+			
+		</fieldset>
+	</fields>
+
+</metadata>

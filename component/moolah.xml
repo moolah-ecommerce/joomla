@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="component" method="upgrade" >
+	<name>com_moolah</name>
+	<author>Moolah E-Commerce</author>
+	<creationDate>February 2013</creationDate>
+	<copyright>Copyright (C) 2012-2013 Moolah E-commerce. All rights reserved.</copyright>
+	<license>GPL 2.0</license>
+	<authorEmail>development@moolah-ecommerce.com</authorEmail>
+	<authorUrl>moolah-ecommerce.com</authorUrl>
+	<version>2.1.1</version>
+    <description>
+        <![CDATA[
+        <div style="text-align:left;">
+            <img src="http://moolah-ecommerce.com/images/moolah/moolah128.png" style="float:right" />
+            <h1>Moolah E-Commerce Store Component</h1>
+            <p>Moolah provides a single-page, mobile-ready checkout for your website without needing to install any software.</p>
+        </div>
+        ]]>
+    </description>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>moolah.php</filename>
+        <folder>helper</folder>
+        <folder>views</folder>
+    </files>
+
+    <administration>
+
+        <files folder="administrator">
+            <filename>config.xml</filename>
+            <filename>index.html</filename>
+            <filename>moolah.php</filename>
+            <folder>language</folder>
+        </files>
+
+    </administration>
+</extension>
