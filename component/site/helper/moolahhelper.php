@@ -4,8 +4,8 @@
  * @package     Moolah Component
  * @subpackage  Site Helper
  *
- * @copyright   Copyright (C) 2005 - 2013 Moolah E-Commerce, Inc. All rights reserved.
- * @license     GNU General Public License version 2; see LICENSE.txt
+ * @copyright   Copyright (C) 2012-2013 Moolah E-Commerce, Inc. All rights reserved.
+ * @license     GNU General Public License version 2
  */
 
 defined('_JEXEC') or die;
