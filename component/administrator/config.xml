@@ -33,13 +33,10 @@
             <option value="iframe">Iframe</option>
         </field>
 
-        <field name="SERVER" type="radio" label="Server"
-               default="test"
+        <field name="SERVER" type="text" label="Server" size="32"
                description="COM_MOOLAH_SERVER_DESC"
-                >
-            <option value="test">Testing</option>
-            <option value="store">Production</option>
-        </field>
+               default=""
+                />
 
     </fieldset>
 

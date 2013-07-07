@@ -2,9 +2,9 @@
 <extension type="package" version="2.5">
 	<name>Moolah E-Commerce Package</name>
 	<packagename>Moolah</packagename>
-	<version>2.1.1</version>
+	<version>2.2</version>
 	<url>http://moolah-ecommerce.com</url>
-	<creationDate>February 2013</creationDate>
+	<creationDate>July 2013</creationDate>
 	<author>Toby Patterson</author>
 	<packager>Moolah E-Commerce</packager>
 	<packagerurl>http://moolah-ecommerce.com</packagerurl>
@@ -14,13 +14,13 @@
         <div style="text-align:left;">
             <img src="http://moolah-ecommerce.com/images/moolah/moolah128.png" style="float:right" />
             <h1>Moolah E-Commerce Store</h1>
-            <p>Moolah provides a single-page, mobile-ready checkout for your website without needing to install any software.</p>
+            <p>Moolah provides a single-page, mobile-ready checkout for your website.</p>
             <h2>Key Features:</h2>
             <ul class="features">
-                <li>Your store will load into the current page of your site, and each step of the check loads smoothly into the current page.</li>
-                <li>A Moolah store can adjust automatically to whatever device the customer is using, and works with as well with a 4" screen as it does with a 24" screen.</li>
-                <li>You can easily integrate Moolah into any website, including Joomla, Wordpress, or even a normal HTML webpage.</li>
-                <li>A store can be deployed to several sites at the same time, and managed from one central location.</li>
+                <li>Your store will load into the current page of your site, and each step of the checkout loads smoothly into the current page.</li>
+                <li>A Moolah store can adjust automatically to whatever device the customer is using, and support both desktop and mobile devices..</li>
+                <li>You can easily place your Moolah store into any website, including Joomla, Wordpress, or even a normal HTML webpage.</li>
+                <li>Your store can be deployed to several sites at the same time, yet managed from one central location.</li>
             </ul>
         </div>
         ]]>

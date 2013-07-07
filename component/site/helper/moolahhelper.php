@@ -26,14 +26,7 @@ class MoolahHelper {
         if (!$home) {
 
             $params = JComponentHelper::getParams('com_moolah');
-            $server = $params->get('SERVER');
-            $local  = (gethostname() == 'Nymph.local');
-
-            if ( $server == 'store' ) {
-                $home = $local ? 'mec-store' : 'store.moolah-ecommerce.com';
-            } else {
-                $home = $local ? 'mec-test' : 'test.moolah-ecommerce.com';
-            }
+            $home   = $params->get('SERVER','store.moolah-ecommerce.com');
 
         }
 
@@ -64,7 +57,7 @@ class MoolahHelper {
     public static function addHeader($params)
     {
         $doc		= JFactory::getDocument();
-        $uri        = JFactory::getUri();
+        $uri        = JUri::getInstance();
         $ssl        = $uri->isSSL();
         $proto      = $ssl ? 'https' : 'http';
 
@@ -75,12 +68,10 @@ class MoolahHelper {
         $siteId     = $params->get('SITE_ID');
         $affiliateId= $params->get('AFFILIATE_ID');
         $divId		= $params->get('DIV_ID','moolah');
-        $version	= $params->get('VERSION');
         $moolah		= $params->get('MOOLAH_JS_LOCATION',"$proto://$site/$storeId/js/");
 
         $args		= "?target=$divId&store=$storeId&category=$categoryId&product=$productId&system=joomla";
 
-        if ( $version )		$args .= "&ver=$version";
         if ( $siteId )      $args .= "&site=$siteId";
         if ( $affiliateId)  $args .= "&affiliate=$affiliateId";
 
