@@ -53,8 +53,15 @@ class plgContentMoolah extends JPlugin
     		return true;
     	}
 
+        // Make sure the helper exists
+        $path = JPATH_ROOT.'/components/com_moolah/helper/moolahhelper.php';
+        if ( ! is_readable($path) ) {
+            $article->text = preg_replace( '#{moolah.*?}#', '<span class="error">Moolah Component Not Installed</span>', $article->text );
+            return true;
+        }
+
         // Load the helper
-        require_once(JPATH_ROOT.'/components/com_moolah/helper/moolahhelper.php');
+        require_once($path);
 
         return $this->plgContentProcessMoolahMatches( $article, $matches, $pluginParams );
 
