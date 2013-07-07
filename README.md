@@ -1,7 +1,7 @@
 Moolah E-Commerce Store for Joomla
 =====================
 
-The Plugin loads a Moolah E-Commerce store into your Joomla website.  These extensions has been build to work with Joomla 3.0 and Joomla 2.5.
+The Moolah E-Commerce for Joomla package loads a Moolah E-Commerce store into your Joomla 3.x website.
 
 Usage:
 You find specific information about using these Joomla extensions at http://moolah-ecommerce.com/learn/deploy/ .
