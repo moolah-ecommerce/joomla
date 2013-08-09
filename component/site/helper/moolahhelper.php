@@ -24,9 +24,14 @@ class MoolahHelper {
         static $home;
 
         if (!$home) {
+            $hostname = function_exists('gethostname') ? gethostname() : php_uname('n');
+            if ( preg_match('#\\.local$#',$hostname ) ) {
+            $home = 'mec-store';
+		} else {
 
             $params = JComponentHelper::getParams('com_moolah');
             $home   = $params->get('SERVER','store.moolah-ecommerce.com');
+	    	}
 
         }
 
