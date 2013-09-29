@@ -26,7 +26,7 @@
     <fieldset name="advanced">
 
         <field name="OPEN_METHOD" type="radio" label="Open Method"
-               default="window"
+               default="iframe"
                description="COM_MOOLAH_OPEN_METHOD_DESC"
                 >
             <option value="window">New Window</option>

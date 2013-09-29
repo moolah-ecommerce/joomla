@@ -12,8 +12,6 @@ defined('_JEXEC') or die;
 
 require_once(JPATH_ROOT.'/components/com_moolah/helper/moolahhelper.php');
 
-JToolbarHelper::title(JText::_('COM_MOOLAH_ECOMMERCE_STORE'));
-JToolbarHelper::preferences('com_moolah');
 
 $params = JComponentHelper::getParams('com_moolah');
 
@@ -26,7 +24,7 @@ if ( $storeId ) {
 
     if ( $openMethod == 'iframe') {
         JHtml::_('behavior.keepalive');
-        $iframeArgs = 'style="overflow:hidden;height:700px;width:100%;border:none;" height="700px" width="100%"';
+        $iframeArgs = 'style="overflow:hidden;height:500px;width:100%;border:none;" height="500px" width="100%"';
         $openHtml = sprintf('<iframe src="%s" %s></iframe>',$openUrl,$iframeArgs);
     } else {
         $openJs = "window.open('$openUrl','new_window'); return false";
@@ -44,6 +42,8 @@ if ( $storeId ) {
 
 $site   = 'http://moolah-ecommerce.com/sign-up';
 if ( ! $storeId ) {
+JToolbarHelper::title(JText::_('COM_MOOLAH_ECOMMERCE_STORE'));
+JToolbarHelper::preferences('com_moolah');
     //$store = 2642953450;
     $anchor = '<a href="%s" title="Moolah E-Commerce" target="_blank">%s</a>';
     $link   = sprintf($anchor,$site,$site);
