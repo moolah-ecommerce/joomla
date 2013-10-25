@@ -1,0 +1,22 @@
+.x-moolah input[type="file"],
+.x-moolah input[type="image"],
+.x-moolah input[type="submit"],
+.x-moolah input[type="reset"],
+.x-moolah input[type="button"],
+.x-moolah input[type="radio"],
+.x-moolah input[type="checkbox"] {
+	width: 13px;
+}
+.x-moolah fieldset {
+    border: none;
+}
+.x-moolah legend {
+	border-bottom: none;
+	margin: 2px 2px;
+	font-size: 14px;
+}
+.x-moolah .x-form-trigger-input-cell input {
+	border-radius: 3px 0 0 3px;
+	-webkit-border-radius: 3px 0 0 3px;
+	-moz-border-radius: 3px 0 0 3px;
+}

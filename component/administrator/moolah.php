@@ -19,8 +19,8 @@ $storeId    = $params->get('STORE_ID');
 $openMethod = $params->get('OPEN_METHOD');
 
 if ( $storeId ) {
-    $home = MoolahHelper::getHome();
-    $openUrl = "http://$home/$storeId/manage";
+    $home = MoolahHelper::getServer();
+    $openUrl = "http://manage.$home/$storeId/";
 
     if ( $openMethod == 'iframe') {
         JHtml::_('behavior.keepalive');

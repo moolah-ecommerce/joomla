@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension type="package" version="2.5">
-	<name>Moolah E-Commerce Package</name>
-	<packagename>Moolah</packagename>
-	<version>2.2</version>
+	<name>Moolah E-Commerce for Joomla</name>
+	<packagename>moolah</packagename>
+	<version>3.2</version>
 	<url>http://moolah-ecommerce.com</url>
-	<creationDate>July 2013</creationDate>
-	<author>Toby Patterson</author>
+	<creationDate>October 2013</creationDate>
+	<author>Moolah E-Commerce</author>
 	<packager>Moolah E-Commerce</packager>
 	<packagerurl>http://moolah-ecommerce.com</packagerurl>
 	<copyright>Copyright (C) 2012-2013 Moolah-Ecommerce. All rights reserved.</copyright>
 	<description>
 	<![CDATA[
         <div style="text-align:left;">
-            <img src="http://moolah-ecommerce.com/images/moolah/moolah128.png" style="float:right" />
+            <img src="http://moolah-ecommerce.com/images/moolah/moolah128.jpg" align="center" />
             <h1>Moolah E-Commerce Store</h1>
-            <p>Moolah provides a single-page, mobile-ready checkout for your website.</p>
+            <p>Moolah provides a single-page, mobile-ready checkout for selling premium goods and business services.</p>
             <h2>Key Features:</h2>
             <ul class="features">
                 <li>Your store will load into the current page of your site, and each step of the checkout loads smoothly into the current page.</li>

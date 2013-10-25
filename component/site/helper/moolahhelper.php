@@ -19,20 +19,13 @@ class MoolahHelper {
      * @since   2.1
      * @static
      */
-    public static function getHome()
+    public static function getServer()
     {
         static $home;
 
         if (!$home) {
-            $hostname = function_exists('gethostname') ? gethostname() : php_uname('n');
-            if ( preg_match('#\\.local$#',$hostname ) ) {
-            $home = 'mec-store';
-		} else {
-
             $params = JComponentHelper::getParams('com_moolah');
-            $home   = $params->get('SERVER','store.moolah-ecommerce.com');
-	    	}
-
+            $home   = $params->get('SERVER','moolah-ecommerce.com');
         }
 
         return $home;
@@ -66,7 +59,7 @@ class MoolahHelper {
         $ssl        = $uri->isSSL();
         $proto      = $ssl ? 'https' : 'http';
 
-        $site       = self::getHome();
+        $site       = 'store.'.self::getServer();
         $storeId	= $params->get('STORE_ID');
         $productId	= $params->get('PRODUCT_ID');
         $categoryId	= $params->get('CATEGORY_ID');
@@ -80,6 +73,7 @@ class MoolahHelper {
         if ( $siteId )      $args .= "&site=$siteId";
         if ( $affiliateId)  $args .= "&affiliate=$affiliateId";
 
+        $doc->addStyleSheet(JUri::root(true) . '/components/com_moolah/moolah.css');
         $doc->addScript( $moolah . 'load.js' . $args );
 
     }
