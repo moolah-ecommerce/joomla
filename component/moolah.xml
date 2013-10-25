@@ -31,7 +31,9 @@
         <files folder="administrator">
             <filename>config.xml</filename>
             <filename>index.html</filename>
+            <filename>load.php</filename>
             <filename>moolah.php</filename>
+            <filename>prompt.php</filename>
             <folder>language</folder>
         </files>
 

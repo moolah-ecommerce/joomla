@@ -13,43 +13,8 @@ defined('_JEXEC') or die;
 require_once(JPATH_ROOT.'/components/com_moolah/helper/moolahhelper.php');
 
 
-$params = JComponentHelper::getParams('com_moolah');
-
+$params     = JComponentHelper::getParams('com_moolah');
 $storeId    = $params->get('STORE_ID');
-$openMethod = $params->get('OPEN_METHOD');
+$fileToLoad = $storeId ? 'load' : 'prompt';
 
-if ( $storeId ) {
-    $home = MoolahHelper::getServer();
-    $openUrl = "http://manage.$home/$storeId/";
-
-    if ( $openMethod == 'iframe') {
-        JHtml::_('behavior.keepalive');
-        $iframeArgs = 'style="overflow:hidden;height:500px;width:100%;border:none;" height="500px" width="100%"';
-        $openHtml = sprintf('<iframe src="%s" %s></iframe>',$openUrl,$iframeArgs);
-    } else {
-        $openJs = "window.open('$openUrl','new_window'); return false";
-        $openClass = 'btn';
-        $openStyle = 'display:block;text-align:center;height:30px;width:240px;margin-left:100px;padding-top:10px;font-size:20px;';
-        $openText = JText::_('Open Management Panel');
-        $openHtml = sprintf('<p><a href="#" onclick="%s" class="%s" style="%s">%s</a></p>',$openJs,$openClass,$openStyle,$openText);
-    }
-
-    echo $openHtml;
-
-} else {
-    echo "<br/>";
-}
-
-$site   = 'http://moolah-ecommerce.com/sign-up';
-if ( ! $storeId ) {
-JToolbarHelper::title(JText::_('COM_MOOLAH_ECOMMERCE_STORE'));
-JToolbarHelper::preferences('com_moolah');
-    //$store = 2642953450;
-    $anchor = '<a href="%s" title="Moolah E-Commerce" target="_blank">%s</a>';
-    $link   = sprintf($anchor,$site,$site);
-    $msg    = JText::_('Click Options to enter your Store ID. If you do not have one, you can register for a free account at %s.');
-
-    echo '<p>'.sprintf($msg,$link).'</p>';
-} else {
-    //echo JText::_('In your Joomla Article, insert the code <strong>{moolah}</strong> into the text to load your store. Alternatively, create a link directly to the Moolah Store.');
-}
+require_once(__DIR__."/$fileToLoad.php");
