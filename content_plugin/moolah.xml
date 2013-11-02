@@ -11,11 +11,10 @@
     <description>
         <![CDATA[
         <div style="text-align:left;">
-            <img style="float:right" src="http://moolah-ecommerce.com/images/moolah/moolah128.png" />
+            <img style="float:right" src="http://moolah-ecommerce.com/images/moolah/moolah256.png" />
             <h1>Moolah E-Commerce Store Plugin</h1>
             <p>Moolah provides a single-page, mobile-ready checkout for your website without needing to install any software.</p>
-            <p>Use the <a href="index.php?option=com_plugins&view=plugins&filter_search=moolah" title="Plugin Manager" >Joomla Plugin Manager</a> to enable the plugin.</p>
-            <p>Then, in your Joomla Article, insert the code <strong>{moolah}</strong> into the text to load your store.</p>
+            <p>In your Joomla Article, insert the code <strong>{moolah}</strong> into the text to load your store.</p>
         </div>
         ]]>
     </description>
@@ -35,7 +34,6 @@
 			
 				<field name="STORE_ID" type="text" label="Store ID" size="32"
 					description="PLG_CONTENT_MOOLAH_STORE_ID_DESC"
-                    default="2642953450"
 				/>
 				
 				<field name="CATEGORY_ID" type="text" label="Category ID" size="32"
@@ -51,14 +49,6 @@
                    description="PLG_CONTENT_MOOLAH_DIV_ID_DESC"
                    default="moolah"
                 />
-
-                <field name="TESTING" type="radio" label="Testing"
-                       default="1"
-                       description="PLG_CONTENT_MOOLAH_TESTING_DESC"
-                        >
-                    <option value="0">No</option>
-                    <option value="1">Yes</option>
-                </field>
 				
 			</fieldset>
 

@@ -3,21 +3,21 @@
     <fieldset name="basic">
 
         <field name="STORE_ID" type="text" label="Store ID" size="32"
-               description="COM_MOOLAH_STORE_ID_DESC"
+               description="COM_MOOLAH_CONFIG_STORE_ID_DESC"
                default="2642953450"
                 />
 
         <field name="CATEGORY_ID" type="text" label="Category ID" size="32"
-               description="COM_MOOLAH_CATEGORY_ID_DESC"
+               description="COM_MOOLAH_CONFIG_CATEGORY_ID_DESC"
                default=""
                 />
 
         <field name="PRODUCT_ID" type="text" label="Product ID" size="32"
-               description="COM_MOOLAH_PRODUCT_ID_DESC"
+               description="COM_MOOLAH_CONFIG_PRODUCT_ID_DESC"
                 />
 
         <field name="DIV_ID" type="text" label="DIV ID" size="32"
-               description="COM_MOOLAH_DIV_ID_DESC"
+               description="COM_MOOLAH_CONFIG_DIV_ID_DESC"
                default="moolah"
                 />
 
@@ -27,14 +27,19 @@
 
         <field name="OPEN_METHOD" type="radio" label="Open Method"
                default="iframe"
-               description="COM_MOOLAH_OPEN_METHOD_DESC"
+               description="COM_MOOLAH_CONFIG_OPEN_METHOD_DESC"
                 >
             <option value="window">New Window</option>
             <option value="iframe">Iframe</option>
         </field>
 
+        <field name="IFRAME_SIZE" type="text" label="Server" size="32"
+               description="COM_MOOLAH_CONFIG_IFRAME_HEIGHT"
+               default="600"
+                />
+
         <field name="SERVER" type="text" label="Server" size="32"
-               description="COM_MOOLAH_SERVER_DESC"
+               description="COM_MOOLAH_CONFIG_SERVER_DESC"
                default=""
                 />
 

@@ -15,13 +15,13 @@ class plgContentMoolah extends JPlugin
     protected   $shouldAddheader    = false;
 
     /**
-     * @param $context
-     * @param $article
-     * @param $params
-     * @param int $page
+     * @param string $context
+     * @param stdClass $article
+     * @param JRegistry $articleParams
+     * @param int $offset
      * @return bool
      */
-    public function onContentPrepare($context, &$article, &$params, $page = 0)
+    public function onContentPrepare($context, $article, $articleParams, $offset = null)
 	{
     	// simple performance check to determine whether bot should process further
     	if ( strpos( $article->text, 'moolah' ) === false ) {
@@ -73,6 +73,12 @@ class plgContentMoolah extends JPlugin
     public function onBeforeRender()
     {
         if ( $this->shouldAddHeader ) {
+            if ( ! $this->params->get('STORE_ID') ) {
+                $componentParams = JComponentHelper::getParams('com_moolah');
+                $storeId = $componentParams->get('STORE_ID');
+                $this->params->set('STORE_ID',$storeId);
+            }
+
             MoolahHelper::addHeader($this->params);
         }
     }
