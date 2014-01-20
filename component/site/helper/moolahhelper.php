@@ -19,7 +19,7 @@ class MoolahHelper {
      * @since   2.1
      * @static
      */
-    public static function getServer()
+    public static function getServer($service='store')
     {
         static $home;
 
@@ -28,7 +28,7 @@ class MoolahHelper {
             $home   = $params->get('SERVER','moolah-ecommerce.com');
         }
 
-        return $home;
+	    return $service . '.' . $home;
     }
 
     /**
@@ -59,7 +59,7 @@ class MoolahHelper {
         $ssl        = $uri->isSSL();
         $proto      = $ssl ? 'https' : 'http';
 
-        $site       = 'store.'.self::getServer();
+        $site       = self::getServer();
         $storeId	= $params->get('STORE_ID');
         $productId	= $params->get('PRODUCT_ID');
         $categoryId	= $params->get('CATEGORY_ID');

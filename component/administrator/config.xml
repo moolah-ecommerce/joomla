@@ -33,7 +33,7 @@
             <option value="iframe">Iframe</option>
         </field>
 
-        <field name="IFRAME_SIZE" type="text" label="Server" size="32"
+        <field name="IFRAME_SIZE" type="text" label="Height" size="32"
                description="COM_MOOLAH_CONFIG_IFRAME_HEIGHT"
                default="600"
                 />

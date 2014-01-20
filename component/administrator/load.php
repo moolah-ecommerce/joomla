@@ -10,11 +10,11 @@
 
 defined('_JEXEC') or die;
 
-$home       = MoolahHelper::getServer();
-$openMethod = $params->get('OPEN_METHOD');
 $storeId    = $params->get('STORE_ID');
-$task       = ( $storeId == 1793220937 ) ? 'store' : 'manage';
-$openUrl    = "http://$task.$home/$storeId/";
+$service    = ( $storeId == 1793220937 ) ? 'store' : 'manage';
+$server     = MoolahHelper::getServer($service);
+$openMethod = $params->get('OPEN_METHOD');
+$openUrl    = "http://$server/$storeId/";
 
 if ( $openMethod == 'iframe') {
     JHtml::_('behavior.keepalive');

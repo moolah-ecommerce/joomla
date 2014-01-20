@@ -12,7 +12,8 @@ defined('_JEXEC') or die;
 
 class plgContentMoolah extends JPlugin
 {
-    protected   $shouldAddheader    = false;
+    protected   $shouldAddHeader    = false;
+
 
     /**
      * @param string $context
